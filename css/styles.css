@@ -1,0 +1,143 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(71, 151, 243);
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    margin: 2rem 3rem;
+    padding: 1.5rem 3rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        margin: 1rem 1.5rem;
+        padding: 1rem 2rem;
+    }
+}
+
+.container:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+    margin: -20px;
+}
+
+.header__title {
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    position: relative;
+}
+
+.header__title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 120px;
+    height: 4px;
+    border-radius: 5px;
+    background: rgb(23, 79, 119);
+}
+
+.subtitle {
+    color: rgba(0, 0, 0, 0.6);
+    margin: 1rem 0 0 0;
+    font-size: 1.8rem;
+}
+
+.subtitle--article {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.header__body > .header__information {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 800px) {
+    .header__body > .header__information {
+        flex-direction: column;
+    }
+}
+
+.paragraph {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.paragraph--bold {
+    font-weight: bold;
+    color: rgba(0,0,0,0.5);
+}
+
+.paragraph--link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    transition: color 0.3s ease-in-out;
+    position: relative;
+}
+
+.paragraph--link:hover {
+    color: rgb(0, 84, 180);
+}
+
+.header__information-img {
+    max-height: 250px;
+    max-width: 150px;
+    border-radius: 3px;
+}
+
+.studies-container {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+@media screen and (max-width: 600px) {
+    .studies-container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 1.5rem 0;
+    }
+}
+
+.studies-container > * {
+    margin: 0;
+}
+
+.studies-container > .subtitle--article {
+    margin-right: 1rem;
+}
+
+.footer {
+    background-color: rgb(44, 44, 44);
+    overflow: hidden;
+    text-align: center;
+    padding: 0.5rem;
+}
